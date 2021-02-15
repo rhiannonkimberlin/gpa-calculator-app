@@ -1,0 +1,40 @@
+<!--
+    ============================================
+; Title:  kimberlin-assignment-6.4
+; Author: Professor Krasso
+; Date:   February 7 2021
+; Modified By: Rhiannon Kimberlin
+; Description: gpa-calculator-app2
+;===========================================
+-->
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <div class="logo">
+            <img src="./assets/gpa-calculator-app.png" height="80" />
+        </div>
+
+        <!--Navigation Bar At Top Right-->
+        <div style="width: 80%">
+            <div fxLayout="row wrap" fxLayoutAlign="end start">
+                <button mat-button routerLink="/">Home</button>
+                <button mat-button (click)="signOut()">Sign Out</button>
+            </div>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<br />
+
+<div fxLayout="row wrap">
+    <div fxFlex>
+        <mat-card class="main-container">
+            <!--Assignemnt Name-->
+            <mat-card-title>{{ assignment }}</mat-card-title>
+            <br /><br />
+            <mat-card-content>
+                <router-outlet></router-outlet>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
